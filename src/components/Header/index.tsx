@@ -4,9 +4,9 @@ import logo from "../../assets/logo.png";
 
 const Header = () => {
   return (
-    <S.header>
-      <S.img src={logo} alt="Shop Now" />
-    </S.header>
+    <S.Header>
+      <S.Img src={logo} alt="Shop Now" />
+    </S.Header>
   );
 };
 
