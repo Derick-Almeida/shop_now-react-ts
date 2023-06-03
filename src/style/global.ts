@@ -15,8 +15,8 @@ export default createGlobalStyle`
         --grey-3: #868E96;
         --black-1: #212529;
         --black-2: #00000040;
-        --green-1: #12B886;
-        --green-2: #12B8860d;
+        --green-1: #72bd2a;
+        --green-2: #72bd2a0d;
     }
 
     a {
