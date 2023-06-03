@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
+export const header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@ export const Header = styled.header`
   overflow: hidden;
 `;
 
-export const Img = styled.img`
+export const img = styled.img`
   height: clamp(4.5rem, 5.8vw, 20rem);
   object-fit: contain;
 `;

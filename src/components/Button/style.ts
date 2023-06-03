@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { IButtonProps } from "./types";
 
-export const Button = styled.button<IButtonProps>`
+export const button = styled.button<IButtonProps>`
   background: var(--green-2);
   color: var(--green-1);
   border: 1.5px solid var(--green-2);
