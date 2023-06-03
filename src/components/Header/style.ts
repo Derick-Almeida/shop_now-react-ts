@@ -8,10 +8,11 @@ export const header = styled.header`
   min-height: 13vh;
   max-height: 13vh;
 
-  box-shadow: 0 0 20px var(--black-2);
+  box-shadow: 0 0 clamp(1.5rem, 1.5vw, 20rem) var(--black-2);
+  overflow: hidden;
 `;
 
 export const img = styled.img`
-  height: 5rem;
+  height: clamp(4.5rem, 5.8vw, 20rem);
   object-fit: contain;
 `;
