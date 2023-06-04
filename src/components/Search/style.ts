@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const container = styled.div`
+export const container = styled.form`
   display: flex;
   gap: 0.5rem;
+`;
+
+export const div = styled.div`
+  position: relative;
 `;
 
 export const input = styled.input`
