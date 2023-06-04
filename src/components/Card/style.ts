@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  width: 25%;
+  width: 23%;
   border-radius: 8px;
-  padding: 10px;
   border: 0.2rem solid var(--green-2);
+
   position: relative;
+  margin-bottom: 30px;
 
   transition: box-shadow 0.3s;
 
@@ -26,9 +23,16 @@ export const img = styled.img`
   object-fit: contain;
 `;
 
+export const content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+`;
+
 export const title = styled.h3`
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `;
 
 export const tag = styled.span`
