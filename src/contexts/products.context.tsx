@@ -8,12 +8,22 @@ const ProductsProvider = ({ children }: IProviderProps) => {
   const [data] = useState<IProductProps[]>(products.data);
   const [filter, setFilter] = useState<IProductProps[]>([]);
 
-  const filterProducts = (tag: string) => {
-    setFilter(
-      data.filter((e: IProductProps) => {
-        e.tag === tag;
-      })
-    );
+  const filterProducts = (text: string) => {
+    if (text === "todos") {
+      setFilter([]);
+    } else {
+      if (text === "Hortifruit" || text === "Laticínios" || text === "Panificadora") {
+        setFilter(data.filter((product: IProductProps) => product.tag === text));
+      } else {
+        console.log(text);
+
+        setFilter(
+          data.filter((product: IProductProps) =>
+            product.name.toLowerCase().includes(text.toLowerCase())
+          )
+        );
+      }
+    }
   };
 
   return (

@@ -6,12 +6,14 @@ import Card from "../Card";
 const ProductList = () => {
   const { data, filter } = useContext(ProductsContex);
 
+  const products = filter.length > 0 ? filter : data;
+
   return (
     <S.main>
       <S.ul>
-        {filter.length > 0
-          ? filter.map((product) => <Card key={product.id} {...product} />)
-          : data.map((product) => <Card key={product.id} {...product} />)}
+        {products.map((product) => (
+          <Card key={product.id} {...product} />
+        ))}
       </S.ul>
     </S.main>
   );

@@ -7,5 +7,5 @@ export const main = styled.main`
 export const ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 29px;
 `;
