@@ -1,5 +1,4 @@
 import GlobalStyle from "./style/global";
-import * as S from "./style/index";
 
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
@@ -12,10 +11,10 @@ function App() {
 
       <>
         <Header />
-        <S.contaier>
+        <div style={{ padding: "6vh 10vw" }}>
           <NavBar />
           <SectionInfo />
-        </S.contaier>
+        </div>
       </>
     </>
   );
