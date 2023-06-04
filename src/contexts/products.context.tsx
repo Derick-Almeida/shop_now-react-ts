@@ -7,6 +7,7 @@ export const ProductsContex = createContext<IProductProviderProps>({} as IProduc
 const ProductsProvider = ({ children }: IProviderProps) => {
   const [data] = useState<IProductProps[]>(products.data);
   const [filter, setFilter] = useState<IProductProps[]>([]);
+  const [preview, setPreview] = useState<IProductProps[]>([]);
 
   const filterProducts = (text: string) => {
     if (text === "todos") {
@@ -15,8 +16,6 @@ const ProductsProvider = ({ children }: IProviderProps) => {
       if (text === "Hortifruit" || text === "Laticínios" || text === "Panificadora") {
         setFilter(data.filter((product: IProductProps) => product.tag === text));
       } else {
-        console.log(text);
-
         setFilter(
           data.filter((product: IProductProps) =>
             product.name.toLowerCase().includes(text.toLowerCase())
@@ -26,8 +25,22 @@ const ProductsProvider = ({ children }: IProviderProps) => {
     }
   };
 
+  const showPreview = (text: string) => {
+    setPreview(
+      data.filter((product: IProductProps) =>
+        product.name.toLowerCase().includes(text.toLowerCase())
+      )
+    );
+  };
+
+  const selectProduct = (id: number) => {
+    setFilter(data.filter((product: IProductProps) => product.id === id));
+  };
+
   return (
-    <ProductsContex.Provider value={{ data, filter, filterProducts }}>
+    <ProductsContex.Provider
+      value={{ data, filter, preview, filterProducts, showPreview, selectProduct }}
+    >
       {children}
     </ProductsContex.Provider>
   );

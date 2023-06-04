@@ -44,9 +44,6 @@ export const tag = styled.span`
 export const price = styled.p`
   font-weight: 500;
   font-size: 0.9rem;
-
-  display: flex;
-  justify-content: space-between;
 `;
 
 export const button = styled.button`

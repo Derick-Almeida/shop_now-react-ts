@@ -4,17 +4,37 @@ import * as S from "./style";
 
 import { RiSearchLine } from "react-icons/ri";
 import { ProductsContex } from "../../contexts/products.context";
+import DropBox from "../DropBox";
 
 const Search = () => {
   const [search, setSearch] = useState<string>("");
 
-  const { filterProducts } = useContext(ProductsContex);
+  const { filterProducts, showPreview } = useContext(ProductsContex);
+
+  const send = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    filterProducts(search);
+    setSearch("");
+  };
+
+  const handler = (text: string) => {
+    setSearch(text);
+    showPreview(text);
+  };
 
   return (
-    <S.container>
-      <S.input placeholder="Pesquisar por" onChange={(e) => setSearch(e.currentTarget.value)} />
+    <S.container onSubmit={(e) => send(e)}>
+      <S.div>
+        <S.input
+          placeholder="Pesquisar por"
+          value={search}
+          onChange={(e) => handler(e.currentTarget.value)}
+        />
+        {search.length > 0 && <DropBox setSearch={setSearch} />}
+      </S.div>
 
-      <Button variant="active" onClick={() => filterProducts(search)}>
+      <Button variant="active" type="submit">
         <RiSearchLine />
       </Button>
     </S.container>

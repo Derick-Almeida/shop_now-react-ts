@@ -15,5 +15,8 @@ export interface IProductProps {
 export interface IProductProviderProps {
   data: IProductProps[];
   filter: IProductProps[];
+  preview: IProductProps[];
   filterProducts: (e: string) => void;
+  showPreview: (e: string) => void;
+  selectProduct: (e: number) => void;
 }
