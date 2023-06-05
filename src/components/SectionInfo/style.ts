@@ -10,6 +10,7 @@ export const container = styled.div`
   padding: 12px 20px;
 
   margin-top: 6vh;
+  cursor: default;
 `;
 
 export const text = styled.p`
