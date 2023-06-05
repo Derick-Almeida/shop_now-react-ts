@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { IProductProps, IProductProviderProps, IProviderProps } from "./types";
-import products from "../database/products";
+import products from "../database/products.json";
 
 export const ProductsContex = createContext<IProductProviderProps>({} as IProductProviderProps);
 
