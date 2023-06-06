@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  width: 23%;
+  width: 32%;
   border-radius: 8px;
   border: 0.2rem solid var(--green-2);
 
