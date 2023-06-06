@@ -18,6 +18,9 @@ export const container = styled.div`
 export const ul = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
 `;
 
 export const card = styled.li`
