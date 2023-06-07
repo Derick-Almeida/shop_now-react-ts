@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const main = styled.main`
-  margin: 5vh 0;
+  margin-top: 5vh;
+  min-width: 70%;
   max-width: 70%;
 `;
 

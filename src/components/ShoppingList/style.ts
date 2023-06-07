@@ -5,7 +5,8 @@ export const aside = styled.aside`
   margin: 5vh 0;
   min-width: 27%;
   max-width: 27%;
-  max-height: 65vh;
+  min-height: 55vh;
+  max-height: 55vh;
 
   position: sticky;
   top: 5vh;
@@ -22,7 +23,7 @@ export const aside = styled.aside`
 export const title = styled.h2`
   font-weight: 500;
   font-size: 1.5rem;
-  margin: -6vh 0px 10vh;
+  margin-bottom: 2vh;
 `;
 
 export const container = styled.div`
@@ -44,7 +45,8 @@ export const ul = styled.ul`
   & > :last-child {
     position: absolute;
     min-width: 100%;
-    bottom: 15%;
+    bottom: 0;
+    font-weight: bold;
     border: none;
   }
 `;

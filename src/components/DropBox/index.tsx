@@ -14,19 +14,23 @@ const DropBox = ({ setSearch }: IDropBoxProps) => {
   return (
     <S.container>
       <S.ul>
-        {preview.map((product) => (
-          <S.card key={product.id} onClick={() => handler(product.id)}>
-            <S.img src={product.image} alt={product.name} />
+        {preview.length > 0 ? (
+          preview.map((product) => (
+            <S.card key={product.id} onClick={() => handler(product.id)}>
+              <S.img src={product.image} alt={product.name} />
 
-            <S.content>
-              <S.title>{product.name}</S.title>
-              <S.tag>{product.tag}</S.tag>
-              <S.text>
-                {product.price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
-              </S.text>
-            </S.content>
-          </S.card>
-        ))}
+              <S.content>
+                <S.title>{product.name}</S.title>
+                <S.tag>{product.tag}</S.tag>
+                <S.text>
+                  {product.price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
+                </S.text>
+              </S.content>
+            </S.card>
+          ))
+        ) : (
+          <p>Nenhum produto foi encontrado!</p>
+        )}
       </S.ul>
     </S.container>
   );
