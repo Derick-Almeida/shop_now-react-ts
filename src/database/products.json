@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "image": "https://i.imgur.com/uUS1ja8.png",
+      "image": "https://i.imgur.com/KpAe0a2.jpg",
       "name": "Morango 5kg",
       "tag": "Hortifruit",
       "price": 7
@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "image": "https://i.imgur.com/eSqPQib.png",
+      "image": "https://i.imgur.com/C5xa7qf.jpg",
       "name": "Yorgut de Morango",
       "tag": "Laticínios",
       "price": 3
@@ -55,6 +55,13 @@
       "name": "Maçã",
       "tag": "Hortifruit",
       "price": 4
+    },
+    {
+      "id": 9,
+      "image": "https://i.imgur.com/B9nwkek.jpg",
+      "name": "Doçe de Leite",
+      "tag": "Laticínios",
+      "price": 6
     }
   ]
 }
