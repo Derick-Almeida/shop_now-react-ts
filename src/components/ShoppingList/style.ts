@@ -41,14 +41,6 @@ export const ul = styled.ul`
   width: 100%;
   position: relative;
   min-height: 100%;
-
-  & > :last-child {
-    position: absolute;
-    min-width: 100%;
-    bottom: 0;
-    font-weight: bold;
-    border: none;
-  }
 `;
 
 export const li = styled.li`
@@ -59,9 +51,14 @@ export const li = styled.li`
 
   transition: background 0.3s;
 
-  &:hover {
-    cursor: pointer;
-    background: var(--grey-1);
+  &:last-child {
+    position: absolute;
+    min-width: 100%;
+    bottom: 0;
+
+    font-weight: bold;
+    border: none;
+    pointer-events: none;
   }
 `;
 
