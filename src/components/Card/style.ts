@@ -17,10 +17,13 @@ export const container = styled.div`
 `;
 
 export const img = styled.img`
-  border-radius: 8px;
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 20vh;
+  max-height: 20vh;
 
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 0.5rem;
 `;
 
 export const content = styled.div`
@@ -51,21 +54,23 @@ export const button = styled.button`
   justify-content: center;
   align-items: center;
 
-  background: var(--green-1);
-  color: var(--white);
-  border: 1.5px solid var(--green-1);
-
-  padding: 10px;
-  border-radius: 50%;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
   font-size: 1rem;
+  font-weight: 500;
+
+  border: none;
+  color: var(--green-1);
+  background-color: var(--green-2);
 
   position: absolute;
   bottom: 10px;
   right: 10px;
 
-  transition: filter 0.6s;
+  transition: background-color 0.4s, color 0.4s;
 
   &:hover {
-    filter: brightness(0.7);
+    background-color: var(--green-1);
+    color: var(--white);
   }
 `;

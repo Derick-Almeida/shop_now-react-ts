@@ -12,7 +12,7 @@ export interface IProductProps {
   price: number;
 }
 
-export interface IProductListProps {
+export interface IProductCartProps {
   id: number;
   name: string;
   price: number;
@@ -23,9 +23,9 @@ export interface IProductProviderProps {
   data: IProductProps[];
   filter: IProductProps[];
   preview: IProductProps[];
-  list: IProductListProps[];
+  cart: IProductCartProps[];
   filterProducts: (e: string) => void;
   showPreview: (e: string) => void;
   selectProduct: (e: number) => void;
-  addToList: (e: number) => void;
+  addToCart: (e: number) => void;
 }
