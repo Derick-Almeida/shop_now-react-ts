@@ -17,7 +17,7 @@ const DropBox = ({ setSearch }: IDropBoxProps) => {
         {preview.length > 0 ? (
           preview.map((product) => (
             <S.card key={product.id} onClick={() => handler(product.id)}>
-              <S.img src={product.image} alt={product.name} />
+              <S.img src={product.image} alt={product.name} draggable="false" />
 
               <S.content>
                 <S.title>{product.name}</S.title>
