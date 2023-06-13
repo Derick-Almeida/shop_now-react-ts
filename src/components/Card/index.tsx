@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { IProductProps } from "../../contexts/types";
 import * as S from "./style";
 
-import { FaCartPlus } from "react-icons/fa";
 import { ProductsContex } from "../../contexts/products.context";
 
 export const Card = ({ id, image, name, price, tag }: IProductProps) => {
@@ -18,9 +17,7 @@ export const Card = ({ id, image, name, price, tag }: IProductProps) => {
         <S.price>{price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</S.price>
       </S.content>
 
-      <S.button onClick={() => addToCart(id)}>
-        <FaCartPlus />
-      </S.button>
+      <S.button onClick={() => addToCart(id)}>Comprar</S.button>
     </S.container>
   );
 };
