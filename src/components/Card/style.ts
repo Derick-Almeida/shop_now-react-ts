@@ -17,10 +17,13 @@ export const container = styled.div`
 `;
 
 export const img = styled.img`
-  border-radius: 8px;
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 20vh;
+  max-height: 20vh;
 
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 0.5rem;
 `;
 
 export const content = styled.div`

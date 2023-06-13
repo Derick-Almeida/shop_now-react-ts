@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { IProductListProps, IProductProps, IProductProviderProps, IProviderProps } from "./types";
+import { IProductCartProps, IProductProps, IProductProviderProps, IProviderProps } from "./types";
 import products from "../database/products.json";
 
 export const ProductsContex = createContext<IProductProviderProps>({} as IProductProviderProps);
@@ -8,7 +8,7 @@ const ProductsProvider = ({ children }: IProviderProps) => {
   const [data] = useState<IProductProps[]>(products.data);
   const [filter, setFilter] = useState<IProductProps[]>([]);
   const [preview, setPreview] = useState<IProductProps[]>([]);
-  const [list, setList] = useState<IProductListProps[]>([]);
+  const [cart, setCart] = useState<IProductCartProps[]>([]);
 
   const filterProducts = (text: string) => {
     if (text === "todos") {
@@ -18,8 +18,10 @@ const ProductsProvider = ({ children }: IProviderProps) => {
         setFilter(data.filter((product: IProductProps) => product.tag === text));
       } else {
         setFilter(
-          data.filter((product: IProductProps) =>
-            product.name.toLowerCase().includes(text.toLowerCase())
+          data.filter(
+            (product: IProductProps) =>
+              product.name.toLowerCase().includes(text.toLowerCase()) ||
+              product.tag.toLowerCase().includes(text.toLocaleLowerCase())
           )
         );
       }
@@ -30,8 +32,10 @@ const ProductsProvider = ({ children }: IProviderProps) => {
 
   const showPreview = (text: string) => {
     setPreview(
-      data.filter((product: IProductProps) =>
-        product.name.toLowerCase().includes(text.toLowerCase())
+      data.filter(
+        (product: IProductProps) =>
+          product.name.toLowerCase().includes(text.toLowerCase()) ||
+          product.tag.toLowerCase().includes(text.toLocaleLowerCase())
       )
     );
 
@@ -44,21 +48,21 @@ const ProductsProvider = ({ children }: IProviderProps) => {
     return null;
   };
 
-  const addToList = (productId: number) => {
+  const addToCart = (productId: number) => {
     const filtredProduct = data.find((product) => product.id === productId);
     const { id, name, price } = filtredProduct as IProductProps;
 
-    if (list.length === 0) {
-      setList([...list, { id, name, price, quantity: 1 }]);
+    if (cart.length === 0) {
+      setCart([...cart, { id, name, price, quantity: 1 }]);
     } else {
-      const idList = [...new Set(list.map((e) => e.id))];
+      const idCart = [...new Set(cart.map((e) => e.id))];
 
-      if (idList.includes(id)) {
-        const updateList = list.map((e) => (e.id === id ? { ...e, quantity: e.quantity + 1 } : e));
+      if (idCart.includes(id)) {
+        const updateCart = cart.map((e) => (e.id === id ? { ...e, quantity: e.quantity + 1 } : e));
 
-        setList(updateList);
+        setCart(updateCart);
       } else {
-        setList([...list, { id, name, price, quantity: 1 }]);
+        setCart([...cart, { id, name, price, quantity: 1 }]);
       }
     }
 
@@ -67,7 +71,7 @@ const ProductsProvider = ({ children }: IProviderProps) => {
 
   return (
     <ProductsContex.Provider
-      value={{ data, filter, preview, list, filterProducts, showPreview, selectProduct, addToList }}
+      value={{ data, filter, preview, cart, filterProducts, showPreview, selectProduct, addToCart }}
     >
       {children}
     </ProductsContex.Provider>

@@ -6,7 +6,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { ProductsContex } from "../../contexts/products.context";
 
 export const Card = ({ id, image, name, price, tag }: IProductProps) => {
-  const { addToList } = useContext(ProductsContex);
+  const { addToCart } = useContext(ProductsContex);
 
   return (
     <S.container>
@@ -18,7 +18,7 @@ export const Card = ({ id, image, name, price, tag }: IProductProps) => {
         <S.price>{price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</S.price>
       </S.content>
 
-      <S.button onClick={() => addToList(id)}>
+      <S.button onClick={() => addToCart(id)}>
         <FaCartPlus />
       </S.button>
     </S.container>

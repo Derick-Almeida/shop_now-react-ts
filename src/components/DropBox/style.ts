@@ -28,6 +28,7 @@ export const card = styled.li`
   justify-content: flex-start;
   gap: 10px;
 
+  min-width: 100%;
   min-height: 10vh;
   max-height: 10vh;
 
@@ -47,8 +48,11 @@ export const content = styled.div`
 `;
 
 export const img = styled.img`
-  width: 32%;
-  object-fit: contain;
+  min-width: 32%;
+  max-width: 32%;
+
+  object-fit: cover;
+  border-radius: 0.5rem;
 `;
 
 export const title = styled.h3`
