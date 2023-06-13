@@ -1,16 +1,18 @@
 import * as S from "./style";
 
-const Cart = () => {
-  // const totalPrice = list
-  // .map((product) => product.price * product.quantity)
-  // .reduce((price, acc) => price + acc, 0);
+import { FaCartArrowDown } from "react-icons/fa";
+import { LuShoppingBag } from "react-icons/lu";
 
+const Cart = () => {
   return (
     <S.cart>
-      <S.h3></S.h3>
+      <S.h3>
+        <FaCartArrowDown /> Carrinho
+      </S.h3>
       <S.container>
-        <S.p></S.p>
-        <S.span></S.span>
+        <LuShoppingBag />
+
+        <S.span>Por enquanto não temos produtos no carrinho</S.span>
       </S.container>
     </S.cart>
   );

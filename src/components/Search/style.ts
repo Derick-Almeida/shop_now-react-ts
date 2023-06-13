@@ -24,7 +24,8 @@ export const input = styled.input`
     color: var(--grey-2);
   }
 
-  &:focus ~ div {
+  &:focus ~ div,
+  &:not(:focus) ~ div:active {
     display: block;
   }
 

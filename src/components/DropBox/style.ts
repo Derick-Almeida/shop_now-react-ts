@@ -16,11 +16,9 @@ export const container = styled.div`
 `;
 
 export const ul = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 10vh;
+  max-height: 60vh;
+  overflow: hidden auto;
 `;
 
 export const card = styled.li`
@@ -69,4 +67,12 @@ export const tag = styled.span`
 export const text = styled.p`
   font-weight: 500;
   font-size: 0.9rem;
+`;
+
+export const message = styled.div`
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
 `;

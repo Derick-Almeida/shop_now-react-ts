@@ -29,7 +29,7 @@ const DropBox = ({ setSearch }: IDropBoxProps) => {
             </S.card>
           ))
         ) : (
-          <p>Nenhum produto foi encontrado!</p>
+          <S.message>Nenhum produto foi encontrado!</S.message>
         )}
       </S.ul>
     </S.container>
