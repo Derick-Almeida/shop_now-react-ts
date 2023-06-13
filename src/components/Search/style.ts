@@ -23,4 +23,12 @@ export const input = styled.input`
   &::placeholder {
     color: var(--grey-2);
   }
+
+  &:focus ~ div {
+    display: block;
+  }
+
+  &:not(:focus) ~ div {
+    display: none;
+  }
 `;

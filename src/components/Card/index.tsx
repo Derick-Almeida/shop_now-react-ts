@@ -9,7 +9,7 @@ export const Card = ({ id, image, name, price, tag }: IProductProps) => {
 
   return (
     <S.container>
-      <S.img src={image} alt={name} />
+      <S.img src={image} alt={name} draggable="false" />
 
       <S.content>
         <S.title>{name}</S.title>

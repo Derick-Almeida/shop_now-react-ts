@@ -5,7 +5,7 @@ import logo from "/logo.png";
 const Header = () => {
   return (
     <S.header>
-      <S.img src={logo} alt="Shop Now" />
+      <S.img src={logo} alt="Shop Now" draggable="false" />
     </S.header>
   );
 };
