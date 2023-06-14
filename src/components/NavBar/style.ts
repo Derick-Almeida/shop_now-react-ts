@@ -5,6 +5,12 @@ export const nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 6vh 0 5vh 0;
+  background: var(--white);
 `;
 
 export const ul = styled.ul`

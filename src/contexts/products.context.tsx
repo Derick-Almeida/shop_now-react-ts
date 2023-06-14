@@ -42,18 +42,18 @@ const ProductsProvider = ({ children }: IProviderProps) => {
     return null;
   };
 
-  const selectProduct = (id: number) => {
+  const selectProduct = (id: string) => {
     setFilter(data.filter((product: IProductProps) => product.id === id));
 
     return null;
   };
 
-  const addToCart = (productId: number) => {
+  const addToCart = (productId: string) => {
     const filtredProduct = data.find((product) => product.id === productId);
-    const { id, name, price } = filtredProduct as IProductProps;
+    const { id, ...rest } = filtredProduct as IProductProps;
 
     if (cart.length === 0) {
-      setCart([...cart, { id, name, price, quantity: 1 }]);
+      setCart([...cart, { id, ...rest, quantity: 1 }]);
     } else {
       const idCart = [...new Set(cart.map((e) => e.id))];
 
@@ -62,7 +62,7 @@ const ProductsProvider = ({ children }: IProviderProps) => {
 
         setCart(updateCart);
       } else {
-        setCart([...cart, { id, name, price, quantity: 1 }]);
+        setCart([...cart, { id, ...rest, quantity: 1 }]);
       }
     }
 

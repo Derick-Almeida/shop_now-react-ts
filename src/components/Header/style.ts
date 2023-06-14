@@ -8,6 +8,9 @@ export const header = styled.header`
   min-height: 13vh;
   max-height: 13vh;
 
+  position: relative;
+  z-index: 1001;
+
   box-shadow: 0 0 clamp(1.5rem, 1.5vw, 20rem) var(--black-2);
   overflow: hidden;
 `;
