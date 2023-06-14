@@ -21,54 +21,6 @@ export const ul = styled.ul`
   overflow: hidden auto;
 `;
 
-export const card = styled.li`
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-
-  min-width: 100%;
-  min-height: 10vh;
-  max-height: 10vh;
-
-  padding: 1%;
-  border-bottom: 1px solid var(--black-2);
-  transition: background 0.3s, filter 0.3s;
-
-  &:hover {
-    cursor: pointer;
-    background: var(--black-2);
-    filter: brightness(0.8);
-  }
-`;
-
-export const content = styled.div`
-  width: 100%;
-`;
-
-export const img = styled.img`
-  min-width: 32%;
-  max-width: 32%;
-
-  object-fit: cover;
-  border-radius: 0.5rem;
-`;
-
-export const title = styled.h3`
-  font-weight: 500;
-  font-size: 1.2rem;
-`;
-
-export const tag = styled.span`
-  font-weight: 400;
-  color: var(--grey-3);
-  font-size: 0.9rem;
-`;
-
-export const text = styled.p`
-  font-weight: 500;
-  font-size: 0.9rem;
-`;
-
 export const message = styled.div`
   min-height: inherit;
   display: flex;

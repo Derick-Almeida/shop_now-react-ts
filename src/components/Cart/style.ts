@@ -6,11 +6,11 @@ export const cart = styled.aside`
   overflow: hidden;
 
   max-height: 65vh;
+  min-width: 28%;
   max-width: 28%;
-  margin-top: 5vh;
 
   position: sticky;
-  top: 5vh;
+  top: 17vh;
 `;
 
 export const h3 = styled.h3`
@@ -48,4 +48,10 @@ export const container = styled.div`
 export const span = styled.span`
   font-weight: 500;
   font-size: 1rem;
+`;
+
+export const ul = styled.ul`
+  padding: 2vh 0px 8vh 0;
+  overflow: hidden auto;
+  max-height: 100%;
 `;
