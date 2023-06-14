@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const card = styled.li`
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
 
   min-width: 100%;
   min-height: 10vh;
@@ -24,6 +23,7 @@ export const card = styled.li`
 
 export const content = styled.div`
   width: 100%;
+  margin-left: 10px;
 `;
 
 export const img = styled.img`
@@ -37,6 +37,11 @@ export const img = styled.img`
 export const title = styled.h3`
   font-weight: 500;
   font-size: 1.2rem;
+  max-width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const tag = styled.span`

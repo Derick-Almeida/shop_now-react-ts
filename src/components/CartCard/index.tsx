@@ -11,7 +11,7 @@ const CartCard = ({ id, image, name, tag, price, quantity, controls, ...props }:
         <S.tag>{tag}</S.tag>
         <S.text>{price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</S.text>
       </S.content>
-      {controls && <>{quantity}</>}
+      {controls && <S.controls></S.controls>}
     </S.card>
   );
 };
