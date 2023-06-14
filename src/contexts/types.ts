@@ -5,18 +5,15 @@ export interface IProviderProps {
 }
 
 export interface IProductProps {
-  id: number;
+  id: string;
   image: string;
   name: string;
   tag: string;
   price: number;
 }
 
-export interface IProductCartProps {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
+export interface IProductCartProps extends IProductProps {
+  quantity?: number;
 }
 
 export interface IProductProviderProps {
@@ -26,6 +23,6 @@ export interface IProductProviderProps {
   cart: IProductCartProps[];
   filterProducts: (e: string) => void;
   showPreview: (e: string) => void;
-  selectProduct: (e: number) => void;
-  addToCart: (e: number) => void;
+  selectProduct: (e: string) => void;
+  addToCart: (e: string) => void;
 }

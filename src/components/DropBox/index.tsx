@@ -1,12 +1,14 @@
-import { useContext } from "react";
 import * as S from "./style";
+import { useContext } from "react";
+import CartCard from "../CartCard";
+
 import { ProductsContex } from "../../contexts/products.context";
 import { IDropBoxProps } from "./types";
 
 const DropBox = ({ setSearch }: IDropBoxProps) => {
   const { preview, selectProduct } = useContext(ProductsContex);
 
-  const handler = (id: number) => {
+  const handler = (id: string) => {
     selectProduct(id);
     setSearch("");
   };
@@ -16,20 +18,10 @@ const DropBox = ({ setSearch }: IDropBoxProps) => {
       <S.ul>
         {preview.length > 0 ? (
           preview.map((product) => (
-            <S.card key={product.id} onClick={() => handler(product.id)}>
-              <S.img src={product.image} alt={product.name} draggable="false" />
-
-              <S.content>
-                <S.title>{product.name}</S.title>
-                <S.tag>{product.tag}</S.tag>
-                <S.text>
-                  {product.price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
-                </S.text>
-              </S.content>
-            </S.card>
+            <CartCard key={product.id} onClick={() => handler(product.id)} {...product} />
           ))
         ) : (
-          <p>Nenhum produto foi encontrado!</p>
+          <S.message>Nenhum produto foi encontrado!</S.message>
         )}
       </S.ul>
     </S.container>
