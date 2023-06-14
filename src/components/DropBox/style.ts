@@ -19,6 +19,12 @@ export const ul = styled.ul`
   min-height: 10vh;
   max-height: 60vh;
   overflow: hidden auto;
+
+  > li:hover {
+    cursor: pointer;
+    background: var(--black-2);
+    filter: brightness(0.8);
+  }
 `;
 
 export const message = styled.div`
