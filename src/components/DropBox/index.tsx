@@ -18,7 +18,12 @@ const DropBox = ({ setSearch }: IDropBoxProps) => {
       <S.ul>
         {preview.length > 0 ? (
           preview.map((product) => (
-            <CartCard key={product.id} onClick={() => handler(product.id)} {...product} />
+            <CartCard
+              key={product.id}
+              onClick={() => handler(product.id)}
+              quantity={1}
+              {...product}
+            />
           ))
         ) : (
           <S.message>Nenhum produto foi encontrado!</S.message>

@@ -13,7 +13,7 @@ export interface IProductProps {
 }
 
 export interface IProductCartProps extends IProductProps {
-  quantity?: number;
+  quantity: number;
 }
 
 export interface IProductProviderProps {
