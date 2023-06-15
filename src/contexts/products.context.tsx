@@ -69,9 +69,45 @@ const ProductsProvider = ({ children }: IProviderProps) => {
     return null;
   };
 
+  const removeToCart = (productId: string) => {
+    const filtredProduct = cart.find((product) => product.id === productId);
+    const { quantity } = filtredProduct as IProductCartProps;
+
+    if (quantity > 1) {
+      const updateCart = cart.map((e) =>
+        e.id === productId ? { ...e, quantity: e.quantity - 1 } : e
+      );
+
+      setCart(updateCart);
+    } else {
+      excludeProduct(productId);
+    }
+
+    return null;
+  };
+
+  const excludeProduct = (productId: string) => {
+    const newList = cart.filter((e) => e.id !== productId);
+
+    setCart(newList);
+
+    return null;
+  };
+
   return (
     <ProductsContex.Provider
-      value={{ data, filter, preview, cart, filterProducts, showPreview, selectProduct, addToCart }}
+      value={{
+        data,
+        filter,
+        preview,
+        cart,
+        filterProducts,
+        showPreview,
+        selectProduct,
+        addToCart,
+        removeToCart,
+        excludeProduct,
+      }}
     >
       {children}
     </ProductsContex.Provider>
