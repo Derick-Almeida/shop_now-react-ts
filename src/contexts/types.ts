@@ -25,4 +25,6 @@ export interface IProductProviderProps {
   showPreview: (e: string) => void;
   selectProduct: (e: string) => void;
   addToCart: (e: string) => void;
+  removeToCart: (e: string) => void;
+  excludeProduct: (e: string) => void;
 }

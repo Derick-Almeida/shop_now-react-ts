@@ -5,6 +5,7 @@ export const cart = styled.aside`
   border-radius: 1rem;
   overflow: hidden;
 
+  min-height: 65vh;
   max-height: 65vh;
   min-width: 28%;
   max-width: 28%;
