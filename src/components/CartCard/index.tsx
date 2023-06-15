@@ -4,7 +4,7 @@ import { ICardProps } from "./types";
 import { ProductsContex } from "../../contexts/products.context";
 
 const CartCard = ({ id, image, name, tag, price, quantity, controls, ...props }: ICardProps) => {
-  const { addToCart } = useContext(ProductsContex);
+  const { addToCart, removeToCart, excludeProduct } = useContext(ProductsContex);
 
   return (
     <S.card {...props}>
@@ -18,13 +18,15 @@ const CartCard = ({ id, image, name, tag, price, quantity, controls, ...props }:
         {controls && (
           <S.controlsContainer>
             <S.controls>
-              <S.button title="remover">-</S.button>
+              <S.button title="remover" onClick={() => removeToCart(id)}>
+                -
+              </S.button>
               <S.span>{quantity}</S.span>
               <S.button title="adicionar" onClick={() => addToCart(id)}>
                 +
               </S.button>
             </S.controls>
-            <S.exclude>excluir</S.exclude>
+            <S.exclude onClick={() => excludeProduct(id)}>excluir</S.exclude>
           </S.controlsContainer>
         )}
       </S.content>
