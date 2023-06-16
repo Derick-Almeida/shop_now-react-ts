@@ -13,9 +13,9 @@ function App() {
 
       <>
         <Header />
-        <S.container>
-          <NavBar />
+        <NavBar />
 
+        <S.container>
           <S.box>
             <ProductList />
             <Cart />
