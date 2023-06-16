@@ -10,6 +10,7 @@ export const button = styled.button<IButtonProps>`
   font-weight: 500;
   font-size: clamp(1rem, 1vw, 5rem);
   padding: clamp(0.8rem, 1vw, 4rem) clamp(1.2rem, 1vw, 4rem);
+  white-space: nowrap;
 
   display: inline-flex;
   justify-content: center;

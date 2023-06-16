@@ -9,8 +9,12 @@ export const nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  padding: 6vh 0 5vh 0;
+  padding: 6vh 4% 5vh 4%;
   background: var(--white);
+
+  @media (min-width: 430px) {
+    padding: 6vh 8% 5vh 8%;
+  }
 `;
 
 export const ul = styled.ul`

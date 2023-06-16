@@ -7,6 +7,7 @@ export const header = styled.header`
 
   min-height: 13vh;
   max-height: 13vh;
+  user-select: none;
 
   position: relative;
   z-index: 1001;
