@@ -16,10 +16,8 @@ function App() {
         <NavBar />
 
         <S.container>
-          <S.box>
-            <ProductList />
-            <Cart />
-          </S.box>
+          <ProductList />
+          <Cart />
         </S.container>
       </>
     </>

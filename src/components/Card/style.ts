@@ -1,29 +1,40 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  width: 32%;
+  width: 80%;
   border-radius: 8px;
   border: 0.2rem solid var(--green-2);
 
   position: relative;
   margin-bottom: 30px;
 
+  flex: none;
+  scroll-snap-align: start;
   transition: box-shadow 0.3s;
 
   &:hover {
     box-shadow: 0 5px 20px var(--black-2);
     cursor: pointer;
   }
+
+  @media (min-width: 430px) {
+    width: 32%;
+  }
 `;
 
 export const img = styled.img`
   min-width: 100%;
   max-width: 100%;
-  min-height: 20vh;
-  max-height: 20vh;
+  min-height: 50vw;
+  max-height: 50vw;
 
   object-fit: cover;
   border-radius: 0.5rem;
+
+  @media (min-width: 430px) {
+    min-height: 20vh;
+    max-height: 20vh;
+  }
 `;
 
 export const content = styled.div`
