@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const container = styled.form`
   display: flex;
   gap: clamp(0.5rem, 0.5vw, 2rem);
+  padding: 0 4%;
+
+  @media (min-width: 430px) {
+    padding: 0;
+  }
 `;
 
 export const div = styled.div`

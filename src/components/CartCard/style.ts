@@ -5,13 +5,18 @@ export const card = styled.li`
   justify-content: flex-start;
 
   min-width: 100%;
-  min-height: 10vh;
-  max-height: 10vh;
+  min-height: 12vh;
+  max-height: 12vh;
 
   padding: 1%;
   border-bottom: 1px solid var(--black-2);
 
   transition: background 0.3s, filter 0.3s;
+
+  @media (min-width: 430px) {
+    min-height: 10vh;
+    max-height: 10vh;
+  }
 `;
 
 export const content = styled.div`
@@ -51,7 +56,7 @@ export const text = styled.p`
 
 export const controlsContainer = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   right: 0;
 
   min-width: 50%;
@@ -65,6 +70,10 @@ export const controlsContainer = styled.div`
 
   background: var(--grey-1);
   border-radius: 0.5rem;
+
+  @media (min-width: 430px) {
+    bottom: 0;
+  }
 `;
 
 export const controls = styled.div`
