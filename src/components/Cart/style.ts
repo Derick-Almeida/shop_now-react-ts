@@ -5,12 +5,16 @@ export const cart = styled.aside`
   border-radius: 1rem;
   overflow: hidden;
 
-  min-height: 65vh;
-  max-height: 65vh;
-  min-width: 28%;
-  max-width: 28%;
-
   position: relative;
+  margin-right: 4%;
+
+  @media (min-width: 430px) {
+    min-height: 60vh;
+    max-height: 60vh;
+    min-width: 28%;
+    max-width: 28%;
+    margin-right: 0;
+  }
 `;
 
 export const h3 = styled.h3`
@@ -34,9 +38,9 @@ export const container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4vh;
 
-  min-height: 30vh;
+  margin: 8vh 0;
   max-height: 45vh;
   text-align: center;
 
@@ -47,12 +51,12 @@ export const container = styled.div`
 
 export const span = styled.span`
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
 `;
 
 export const ul = styled.ul`
   padding-top: 1.5vh;
   overflow: hidden auto;
-  min-height: 72%;
-  max-height: 72%;
+  min-height: 70%;
+  max-height: 70%;
 `;

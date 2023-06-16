@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 120%;
   overflow: hidden;
 
   border-radius: 8px;
@@ -13,10 +12,15 @@ export const container = styled.div`
   left: 0;
   top: 110%;
   z-index: 9;
+
+  @media (min-width: 430px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
 `;
 
 export const ul = styled.ul`
-  min-height: 10vh;
+  min-height: 12vh;
   max-height: 60vh;
   overflow: hidden auto;
 
@@ -24,6 +28,10 @@ export const ul = styled.ul`
     cursor: pointer;
     background: var(--black-2);
     filter: brightness(0.8);
+  }
+
+  @media (min-width: 430px) {
+    min-height: 10vh;
   }
 `;
 
