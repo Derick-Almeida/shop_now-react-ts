@@ -7,8 +7,8 @@ export const container = styled.div`
   z-index: 9;
 
   min-width: 100%;
-  height: 10vh;
-  max-height: 10vh;
+  height: 13vh;
+  max-height: 13vh;
 
   background-color: var(--grey-1);
   padding: 0 5%;
@@ -18,6 +18,11 @@ export const container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+
+  @media (min-width: 430px) {
+    height: 10vh;
+    max-height: 10vh;
+  }
 `;
 
 export const span = styled.span`
