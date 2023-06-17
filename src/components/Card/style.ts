@@ -12,14 +12,14 @@ export const container = styled.div`
   scroll-snap-align: center;
   transition: box-shadow 0.3s;
 
-  &:hover {
-    box-shadow: 0 5px 20px var(--black-2);
-    cursor: pointer;
-  }
-
   @media (min-width: 430px) {
     width: 32%;
     margin-bottom: 4vh;
+
+    &:hover {
+      box-shadow: 0 5px 20px var(--black-2);
+      cursor: pointer;
+    }
   }
 `;
 
