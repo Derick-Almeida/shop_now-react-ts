@@ -65,9 +65,25 @@ export const ul = styled.ul`
   max-height: inherit;
   padding-bottom: 22vh;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   @media (min-width: 430px) {
     min-height: 70%;
     max-height: 70%;
     padding-bottom: 0;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 1rem;
+      background-color: var(--grey-1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--black-2);
+      border-radius: 0.4rem;
+      border: 0.2rem solid white;
+    }
   }
 `;
