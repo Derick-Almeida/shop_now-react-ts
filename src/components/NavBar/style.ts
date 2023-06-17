@@ -27,20 +27,10 @@ export const ul = styled.ul`
   gap: clamp(0.8rem, 0.9vw, 3.5rem);
 
   overflow-x: auto;
-  padding: 0 4% 2vh 4%;
+  padding: 0 4% 0 4%;
 
   &::-webkit-scrollbar {
-    height: 1.5vh;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--black-2);
-    border-radius: 5rem;
-  }
-
-  &::-webkit-scrollbar-button {
-    background: none;
-    width: 2%;
+    display: none;
   }
 
   @media (min-width: 430px) {
