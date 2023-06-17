@@ -5,6 +5,9 @@ export const cart = styled.aside`
   border-radius: 1rem;
   overflow: hidden;
 
+  min-height: 46vh;
+  max-height: 92vh;
+
   position: relative;
   margin: 0 4%;
 
@@ -57,6 +60,14 @@ export const span = styled.span`
 export const ul = styled.ul`
   padding-top: 1.5vh;
   overflow: hidden auto;
-  min-height: 70%;
-  max-height: 70%;
+
+  min-height: inherit;
+  max-height: inherit;
+  padding-bottom: 22vh;
+
+  @media (min-width: 430px) {
+    min-height: 70%;
+    max-height: 70%;
+    padding-bottom: 0;
+  }
 `;

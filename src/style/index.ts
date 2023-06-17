@@ -6,7 +6,7 @@ export const container = styled.div`
   flex-direction: column;
   gap: 4vh;
 
-  padding-bottom: 8vh;
+  padding-bottom: 4vh;
 
   @media (min-width: 430px) {
     padding: 0vh 8% 8vh 8%;
