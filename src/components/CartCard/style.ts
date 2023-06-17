@@ -96,14 +96,25 @@ export const button = styled.button`
 
   transition: color 0.4s, text-shadow 0.4s;
 
-  &:hover {
+  &:active {
     color: var(--green-1);
     text-shadow: 0.05rem 0.05rem 0.1rem var(--green-1);
   }
 
-  &:nth-child(1):hover {
+  &:nth-child(1):active {
     color: var(--red);
     text-shadow: 0.05rem 0.05rem 0.1rem var(--red);
+  }
+
+  @media (min-width: 430px) {
+    &:hover {
+      color: var(--green-1);
+      text-shadow: 0.05rem 0.05rem 0.1rem var(--green-1);
+    }
+    &:nth-child(1):hover {
+      color: var(--red);
+      text-shadow: 0.05rem 0.05rem 0.1rem var(--red);
+    }
   }
 `;
 
@@ -118,9 +129,16 @@ export const exclude = styled.button`
 
   transition: color 0.4s, text-shadow 0.4s;
 
-  &:hover {
+  &:active {
     color: var(--red);
     text-shadow: 0.05rem 0.05rem 0.1rem var(--red);
+  }
+
+  @media (min-width: 430px) {
+    &:hover {
+      color: var(--red);
+      text-shadow: 0.05rem 0.05rem 0.1rem var(--red);
+    }
   }
 `;
 
