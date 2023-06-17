@@ -5,15 +5,18 @@ export const cart = styled.aside`
   border-radius: 1rem;
   overflow: hidden;
 
+  min-height: 46vh;
+  max-height: 92vh;
+
   position: relative;
-  margin-right: 4%;
+  margin: 0 4%;
 
   @media (min-width: 430px) {
     min-height: 60vh;
     max-height: 60vh;
     min-width: 28%;
     max-width: 28%;
-    margin-right: 0;
+    margin: 0;
   }
 `;
 
@@ -57,6 +60,14 @@ export const span = styled.span`
 export const ul = styled.ul`
   padding-top: 1.5vh;
   overflow: hidden auto;
-  min-height: 70%;
-  max-height: 70%;
+
+  min-height: inherit;
+  max-height: inherit;
+  padding-bottom: 22vh;
+
+  @media (min-width: 430px) {
+    min-height: 70%;
+    max-height: 70%;
+    padding-bottom: 0;
+  }
 `;

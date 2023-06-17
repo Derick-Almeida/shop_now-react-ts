@@ -68,7 +68,6 @@ export const controlsContainer = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  background: var(--grey-1);
   border-radius: 0.5rem;
 
   @media (min-width: 430px) {

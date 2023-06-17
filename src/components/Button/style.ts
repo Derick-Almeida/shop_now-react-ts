@@ -18,7 +18,7 @@ export const button = styled.button<IButtonProps>`
 
   transition: background 0.5s, color 0.5s, border-color 0.6s, filter 0.6s;
 
-  &:hover {
+  &:active {
     cursor: pointer;
     background: var(--green-1);
     color: var(--white);
@@ -33,10 +33,32 @@ export const button = styled.button<IButtonProps>`
           color: var(--white);
           border: clamp(0.1rem, 0.1vw, 0.2rem) solid var(--green-1);
 
-          &:hover {
+          &:active {
             filter: brightness(0.7);
           }
         `;
     }
   }}
+
+  @media (min-width: 430px) {
+    ${({ variant }) => {
+      switch (variant) {
+        case "active":
+          return css`
+            &:hover {
+              filter: brightness(0.7);
+            }
+          `;
+        default:
+          return css`
+            &:hover {
+              cursor: pointer;
+              background: var(--green-1);
+              color: var(--white);
+              border-color: var(--green-1);
+            }
+          `;
+      }
+    }}
+  }
 `;
