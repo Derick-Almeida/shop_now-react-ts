@@ -4,9 +4,8 @@ export const container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 5vh;
+  gap: 4vh;
 
-  padding-left: 4%;
   padding-bottom: 8vh;
 
   @media (min-width: 430px) {

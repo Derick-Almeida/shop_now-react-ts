@@ -6,14 +6,14 @@ export const cart = styled.aside`
   overflow: hidden;
 
   position: relative;
-  margin-right: 4%;
+  margin: 0 4%;
 
   @media (min-width: 430px) {
     min-height: 60vh;
     max-height: 60vh;
     min-width: 28%;
     max-width: 28%;
-    margin-right: 0;
+    margin: 0;
   }
 `;
 

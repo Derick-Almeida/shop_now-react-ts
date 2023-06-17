@@ -6,10 +6,10 @@ export const container = styled.div`
   border: 0.2rem solid var(--green-2);
 
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 2vh;
 
   flex: none;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   transition: box-shadow 0.3s;
 
   &:hover {
@@ -19,6 +19,7 @@ export const container = styled.div`
 
   @media (min-width: 430px) {
     width: 32%;
+    margin-bottom: 4vh;
   }
 `;
 
@@ -80,8 +81,15 @@ export const button = styled.button`
 
   transition: background-color 0.4s, color 0.4s;
 
-  &:hover {
+  &:active {
     background-color: var(--green-1);
     color: var(--white);
+  }
+
+  @media (min-width: 430px) {
+    &:hover {
+      background-color: var(--green-1);
+      color: var(--white);
+    }
   }
 `;
