@@ -5,8 +5,7 @@ export const header = styled.header`
   align-items: center;
   justify-content: center;
 
-  min-height: 13vh;
-  max-height: 13vh;
+  height: clamp(6rem, 7.55vw, 26rem);
   user-select: none;
 
   position: relative;
@@ -17,6 +16,6 @@ export const header = styled.header`
 `;
 
 export const img = styled.img`
-  height: clamp(4.5rem, 5.8vw, 20rem);
+  height: clamp(4.5rem, 6vw, 20rem);
   object-fit: contain;
 `;

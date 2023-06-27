@@ -15,6 +15,13 @@ export const nav = styled.nav`
   background: var(--white);
 
   @media (min-width: 430px) {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 5vh;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
     gap: 0;
     position: sticky;
     padding: 6vh 8% 5vh 8%;
@@ -35,6 +42,7 @@ export const ul = styled.ul`
 
   @media (min-width: 430px) {
     padding: 0;
+    max-width: 100%;
   }
 `;
 
