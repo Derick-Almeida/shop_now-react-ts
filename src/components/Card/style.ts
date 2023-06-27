@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const container = styled.div`
+export const container = styled.li`
   width: 80%;
   border-radius: 8px;
   border: 0.2rem solid var(--green-2);
