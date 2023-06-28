@@ -21,10 +21,10 @@ export const nav = styled.nav`
   }
 
   @media (min-width: 1024px) {
-    flex-direction: row;
-    gap: 0;
+    flex-flow: row nowrap;
+    align-items: flex-start;
     position: sticky;
-    padding: 6vh 8% 5vh 8%;
+    padding: 8vh 8% 5vh 8%;
   }
 `;
 
@@ -43,6 +43,24 @@ export const ul = styled.ul`
   @media (min-width: 430px) {
     padding: 0;
     max-width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+
+    &::-webkit-scrollbar {
+      display: block;
+      height: 1rem;
+      background-color: var(--grey-1);
+      border: 0.2rem solid white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--black-2);
+      border-radius: 0.4rem;
+      border: 0.2rem solid white;
+    }
   }
 `;
 

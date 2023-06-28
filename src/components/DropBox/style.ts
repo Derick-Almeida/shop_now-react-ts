@@ -39,14 +39,13 @@ export const ul = styled.ul`
 
     &::-webkit-scrollbar {
       display: block;
-      width: 1rem;
+      width: 0.8rem;
       background-color: var(--grey-1);
     }
 
     &::-webkit-scrollbar-thumb {
       background-color: var(--black-2);
       border-radius: 0.4rem;
-      border: 0.2rem solid white;
     }
   }
 `;
