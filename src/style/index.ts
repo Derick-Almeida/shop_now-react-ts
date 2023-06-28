@@ -10,6 +10,9 @@ export const container = styled.div`
 
   @media (min-width: 430px) {
     padding: 0vh 8% 8vh 8%;
+  }
+
+  @media (min-width: 1024px) {
     flex-direction: row;
     gap: 0;
   }

@@ -78,6 +78,7 @@ export const ul = styled.ul`
       display: block;
       width: 1rem;
       background-color: var(--grey-1);
+      border: 0.2rem solid white;
     }
 
     &::-webkit-scrollbar-thumb {
