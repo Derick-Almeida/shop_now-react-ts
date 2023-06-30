@@ -7,12 +7,17 @@ export const container = styled.li`
 
   position: relative;
   margin-bottom: 2vh;
+  overflow: hidden;
 
   flex: none;
   scroll-snap-align: center;
   transition: box-shadow 0.3s;
 
   @media (min-width: 430px) {
+    width: 48%;
+  }
+
+  @media (min-width: 700px) {
     width: 32%;
     margin-bottom: 4vh;
 
@@ -33,8 +38,8 @@ export const img = styled.img`
   border-radius: 0.5rem;
 
   @media (min-width: 430px) {
-    min-height: 20vh;
-    max-height: 20vh;
+    min-height: clamp(8rem, 11vw, 30rem);
+    max-height: clamp(8rem, 11vw, 30rem);
   }
 `;
 
@@ -86,7 +91,7 @@ export const button = styled.button`
     color: var(--white);
   }
 
-  @media (min-width: 430px) {
+  @media (min-width: 1024px) {
     &:hover {
       background-color: var(--green-1);
       color: var(--white);

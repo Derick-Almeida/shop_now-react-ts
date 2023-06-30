@@ -11,7 +11,18 @@ export const cart = styled.aside`
   position: relative;
   margin: 0 4%;
 
-  @media (min-width: 430px) {
+  @media (min-width: 426px) {
+    min-width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 700px) {
+    min-width: 70%;
+    max-width: 70%;
+  }
+
+  @media (min-width: 1024px) {
     min-height: 60vh;
     max-height: 60vh;
     min-width: 28%;
@@ -78,6 +89,7 @@ export const ul = styled.ul`
       display: block;
       width: 1rem;
       background-color: var(--grey-1);
+      border: 0.2rem solid white;
     }
 
     &::-webkit-scrollbar-thumb {

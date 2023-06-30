@@ -20,6 +20,27 @@ export default createGlobalStyle`
         --red: #FF0000
     }
 
+    html{
+        &::-webkit-scrollbar {
+      display: block;
+      width: 1rem;
+      background-color: var(--grey-1);
+      border: 0.2rem solid white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--black-2);
+      border-radius: 0.4rem;
+      border: 0.2rem solid white;
+    }
+    }
+
+    body{
+        background: var(--white);
+        min-width: 100%;
+        min-height: 100vh;
+    }
+
     a {
         text-decoration: none;
     }
@@ -37,9 +58,4 @@ export default createGlobalStyle`
         list-style: none;
     }
 
-    body{
-        background: var(--white);
-        min-width: 100%;
-        min-height: 100vh;
-    }
 `;
