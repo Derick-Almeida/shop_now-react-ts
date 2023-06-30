@@ -23,7 +23,11 @@ export const ul = styled.ul`
 
   @media (min-width: 430px) {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 1.5rem 4%;
     padding: 0;
+  }
+
+  @media (min-width: 700px) {
+    gap: 1rem 2%;
   }
 `;
