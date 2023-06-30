@@ -91,7 +91,7 @@ export const button = styled.button`
     color: var(--white);
   }
 
-  @media (min-width: 430px) {
+  @media (min-width: 1024px) {
     &:hover {
       background-color: var(--green-1);
       color: var(--white);
