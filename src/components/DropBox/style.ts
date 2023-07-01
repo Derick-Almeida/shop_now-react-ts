@@ -20,7 +20,7 @@ export const container = styled.div`
 `;
 
 export const ul = styled.ul`
-  min-height: 12vh;
+  min-height: clamp(5rem, 5vw, 10rem);
   max-height: 60vh;
   overflow: hidden auto;
 
@@ -35,8 +35,6 @@ export const ul = styled.ul`
   }
 
   @media (min-width: 430px) {
-    min-height: 10vh;
-
     &::-webkit-scrollbar {
       display: block;
       width: 0.8rem;
@@ -55,5 +53,6 @@ export const message = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 1.1rem;
 `;

@@ -40,7 +40,7 @@ export const button = styled.button<IButtonProps>`
     }
   }}
 
-  @media (min-width: 430px) {
+  @media (min-width: 1024px) {
     ${({ variant }) => {
       switch (variant) {
         case "active":
