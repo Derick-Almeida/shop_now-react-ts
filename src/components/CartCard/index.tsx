@@ -1,11 +1,8 @@
-import { useContext } from "react";
 import * as S from "./style";
 import { ICardProps } from "./types";
-import { ProductsContex } from "../../contexts/products.context";
+import CartCardControl from "../CartCardControls";
 
 const CartCard = ({ id, image, name, tag, price, quantity, controls, ...props }: ICardProps) => {
-  const { addToCart, removeToCart, excludeProduct } = useContext(ProductsContex);
-
   return (
     <S.card {...props}>
       <S.img src={image} alt={name} draggable="false" />
@@ -15,20 +12,7 @@ const CartCard = ({ id, image, name, tag, price, quantity, controls, ...props }:
         <S.tag>{tag}</S.tag>
         <S.text>{price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</S.text>
 
-        {controls && (
-          <S.controlsContainer>
-            <S.controls>
-              <S.button title="remover" onClick={() => removeToCart(id)}>
-                -
-              </S.button>
-              <S.span>{quantity}</S.span>
-              <S.button title="adicionar" onClick={() => addToCart(id)}>
-                +
-              </S.button>
-            </S.controls>
-            <S.exclude onClick={() => excludeProduct(id)}>excluir</S.exclude>
-          </S.controlsContainer>
-        )}
+        {controls && <CartCardControl id={id} quantity={quantity} />}
       </S.content>
     </S.card>
   );

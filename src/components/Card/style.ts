@@ -20,7 +20,9 @@ export const container = styled.li`
   @media (min-width: 700px) {
     width: 32%;
     margin-bottom: 4vh;
+  }
 
+  @media (min-width: 1024px) {
     &:hover {
       box-shadow: 0 5px 20px var(--black-2);
       cursor: pointer;
