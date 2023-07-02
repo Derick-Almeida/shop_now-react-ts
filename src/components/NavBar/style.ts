@@ -24,6 +24,10 @@ export const nav = styled.nav`
     flex-flow: row nowrap;
     align-items: flex-start;
     position: sticky;
+    padding: 8vh 5% 5vh 5%;
+  }
+
+  @media (min-width: 1280px) {
     padding: 8vh 8% 5vh 8%;
   }
 `;

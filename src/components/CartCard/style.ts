@@ -3,15 +3,21 @@ import styled from "styled-components";
 export const card = styled.li`
   display: flex;
   justify-content: flex-start;
+  background-color: var(--white);
 
   min-width: 100%;
-  min-height: clamp(5rem, 5vw, 10rem);
-  max-height: clamp(5rem, 5vw, 10rem);
+  min-height: clamp(6rem, 5vw, 10rem);
+  max-height: clamp(6rem, 5vw, 10rem);
 
   padding: 1%;
   border-bottom: 1px solid var(--black-2);
 
   transition: background 0.3s, filter 0.3s;
+
+  @media (min-width: 1024px) {
+    min-height: clamp(5rem, 5vw, 10rem);
+    max-height: clamp(5rem, 5vw, 10rem);
+  }
 `;
 
 export const content = styled.div`
@@ -23,8 +29,8 @@ export const content = styled.div`
 export const img = styled.img`
   min-width: 32%;
   max-width: 32%;
-  min-height: clamp(4rem, 5vw, 10rem);
-  max-height: clamp(5rem, 5vw, 10rem);
+  min-height: 100%;
+  max-height: 100%;
 
   object-fit: cover;
   border-radius: 0.5rem;
