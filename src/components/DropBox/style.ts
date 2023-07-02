@@ -21,7 +21,7 @@ export const container = styled.div`
 
 export const ul = styled.ul`
   min-height: clamp(5rem, 5vw, 10rem);
-  max-height: 60vh;
+  max-height: calc(clamp(5rem, 5vw, 10rem) * 5.5);
   overflow: hidden auto;
 
   > li:hover {
