@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const controlsContainer = styled.div`
   position: absolute;
-  bottom: 1vh;
+  bottom: 0;
   right: 0;
 
   min-width: 50%;
@@ -11,14 +11,10 @@ export const controlsContainer = styled.div`
   max-height: 5vh;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
 
   border-radius: 0.5rem;
-
-  @media (min-width: 430px) {
-    bottom: 0;
-  }
 `;
 
 export const controls = styled.div`

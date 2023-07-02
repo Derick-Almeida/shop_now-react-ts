@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 9;
-
   min-width: 100%;
-  height: 13vh;
-  max-height: 13vh;
+  height: clamp(5rem, 5vw, 10rem);
+  max-height: clamp(5rem, 5vw, 10rem);
 
   background-color: var(--grey-1);
   padding: 0 5%;
@@ -18,11 +13,6 @@ export const container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-
-  @media (min-width: 430px) {
-    height: 10vh;
-    max-height: 10vh;
-  }
 `;
 
 export const span = styled.span`

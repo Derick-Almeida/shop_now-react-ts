@@ -9,11 +9,15 @@ export const container = styled.div`
   padding-bottom: 4vh;
 
   @media (min-width: 430px) {
-    padding: 0vh 8% 8vh 8%;
+    padding: 0vh 5% 8vh 5%;
   }
 
   @media (min-width: 1024px) {
     flex-direction: row;
     gap: 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0vh 8% 5vh 8%;
   }
 `;

@@ -5,9 +5,6 @@ export const cart = styled.aside`
   border-radius: 1rem;
   overflow: hidden;
 
-  min-height: 46vh;
-  max-height: 92vh;
-
   position: relative;
   margin: 0 4%;
 
@@ -23,8 +20,7 @@ export const cart = styled.aside`
   }
 
   @media (min-width: 1024px) {
-    min-height: 60vh;
-    max-height: 60vh;
+    height: fit-content;
     min-width: 28%;
     max-width: 28%;
     margin: 0;
@@ -69,21 +65,20 @@ export const span = styled.span`
 `;
 
 export const ul = styled.ul`
-  padding-top: 1.5vh;
+  padding: 1vh 0;
   overflow: hidden auto;
 
-  min-height: inherit;
-  max-height: inherit;
-  padding-bottom: 22vh;
+  min-height: 30rem;
+  max-height: 30rem;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  @media (min-width: 430px) {
-    min-height: 70%;
-    max-height: 70%;
+  @media (min-width: 1024px) {
     padding-bottom: 0;
+    min-height: 22rem;
+    max-height: 22rem;
 
     &::-webkit-scrollbar {
       display: block;
