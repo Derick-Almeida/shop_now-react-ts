@@ -12,23 +12,27 @@ export const nav = styled.nav`
   z-index: 999;
 
   padding: 6vh 0 5vh 0;
+  margin: 0 auto;
   background: var(--white);
 
   @media (min-width: 430px) {
     flex-direction: column-reverse;
     gap: 1.5rem;
-    padding: 5vh;
+    padding: 5vh 0;
+    width: 90%;
   }
 
   @media (min-width: 1024px) {
     flex-flow: row nowrap;
     align-items: flex-start;
     position: sticky;
-    padding: 8vh 5% 5vh 5%;
+    padding: 8vh 0 5vh 0;
   }
 
   @media (min-width: 1280px) {
-    padding: 8vh 8% 5vh 8%;
+    padding: 8vh 0 5vh 0;
+    width: 84%;
+    max-width: 2000px;
   }
 `;
 

@@ -6,8 +6,8 @@ export const card = styled.li`
   background-color: var(--white);
 
   min-width: 100%;
-  min-height: clamp(6rem, 5vw, 10rem);
-  max-height: clamp(6rem, 5vw, 10rem);
+  min-height: clamp(6rem, 5vw, 7rem);
+  max-height: clamp(6rem, 5vw, 7rem);
 
   padding: 1%;
   border-bottom: 1px solid var(--black-2);
@@ -15,8 +15,8 @@ export const card = styled.li`
   transition: background 0.3s, filter 0.3s;
 
   @media (min-width: 1024px) {
-    min-height: clamp(5rem, 5vw, 10rem);
-    max-height: clamp(5rem, 5vw, 10rem);
+    min-height: clamp(5rem, 5vw, 7rem);
+    max-height: clamp(5rem, 5vw, 7rem);
   }
 `;
 
