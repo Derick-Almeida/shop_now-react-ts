@@ -7,9 +7,11 @@ export const container = styled.div`
   gap: 4vh;
 
   padding-bottom: 4vh;
+  margin: 0 auto;
 
   @media (min-width: 430px) {
-    padding: 0vh 5% 8vh 5%;
+    padding-bottom: 8vh;
+    width: 90%;
   }
 
   @media (min-width: 1024px) {
@@ -18,6 +20,8 @@ export const container = styled.div`
   }
 
   @media (min-width: 1280px) {
-    padding: 0vh 8% 5vh 8%;
+    padding-bottom: 5vh;
+    width: 84%;
+    max-width: 2000px;
   }
 `;
