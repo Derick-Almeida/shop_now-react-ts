@@ -40,8 +40,8 @@ export const img = styled.img`
   border-radius: 0.5rem;
 
   @media (min-width: 430px) {
-    min-height: clamp(8rem, 11vw, 30rem);
-    max-height: clamp(8rem, 11vw, 30rem);
+    min-height: clamp(8rem, 11vw, 12rem);
+    max-height: clamp(8rem, 11vw, 12rem);
   }
 `;
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const container = styled.form`
   display: flex;
-  gap: clamp(0.5rem, 0.5vw, 2rem);
+  gap: clamp(0.5rem, 0.5vw, 1rem);
   padding: 0 4%;
 
   @media (min-width: 430px) {
@@ -17,13 +17,13 @@ export const div = styled.div`
 export const input = styled.input`
   background: var(--grey-1);
   border: none;
-  border-radius: clamp(0.55rem, 0.7vw, 2rem);
+  border-radius: clamp(0.55rem, 0.7vw, 1rem);
 
-  padding: clamp(0.75rem, 0.8vw, 3rem) clamp(1.25rem, 0.9vw, 4rem);
+  padding: clamp(0.75rem, 0.8vw, 1.5rem) clamp(1.25rem, 0.9vw, 2rem);
   width: 100%;
 
   font-weight: 400;
-  font-size: clamp(1rem, 1vw, 5rem);
+  font-size: clamp(1rem, 1vw, 2rem);
 
   &::placeholder {
     color: var(--grey-2);
